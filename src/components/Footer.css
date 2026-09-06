@@ -1,0 +1,19 @@
+.site-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 22px 28px;
+  color: rgba(255, 255, 255, 0.78);
+  background: #1c1e2b;
+  font-size: 13px;
+  box-shadow: inset 0 3px 0 #56a14b;
+  text-align: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.site-footer p {
+  margin: 0;
+  letter-spacing: 0.02em;
+}
