@@ -80,6 +80,10 @@ http://localhost:5173
 6. Usa el filtro de resultados para buscar por mensaje o ingeniero.
 7. Descarga el resultado filtrado con **Descargar CSV**.
 
+## Visualización
+<img width="1314" height="693" alt="image" src="https://github.com/user-attachments/assets/f8289d63-2dcc-4b1a-908f-9f9100648d28" />
+
+
 ## Comandos disponibles
 
 ```bash
