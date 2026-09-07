@@ -106,12 +106,12 @@ function SearchFilters({
         <input
           type="search"
           value={resultFilter}
-          placeholder="Mensaje o ingeniero"
+          placeholder="Mensaje, ingeniero o tag"
           onChange={(event) => {
             setResultFilter(event.target.value)
             onResultFilterChange(event.target.value)
           }}
-          aria-label="Filtrar por mensaje o ingeniero"
+          aria-label="Filtrar por mensaje, ingeniero o tag"
         />
       </label>
     </form>

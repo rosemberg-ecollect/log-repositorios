@@ -12,7 +12,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [branchesLoading, setBranchesLoading] = useState(false);
   const [branches, setBranches] = useState<string[]>([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [resultFilter, setResultFilter] = useState('');
   const repositories = ['plus', 'erpagent', 'bankagent', 'connector'];
   const [query, setQuery] = useState<{
@@ -29,6 +29,7 @@ function App() {
     ? merges.filter((item) => (
       item.commit.message.toLocaleLowerCase().includes(normalizedResultFilter)
       || item.commit.author.name.toLocaleLowerCase().includes(normalizedResultFilter)
+      || item.tags.some((tag) => tag.toLocaleLowerCase().includes(normalizedResultFilter))
     ))
     : merges;
 
@@ -57,7 +58,7 @@ function App() {
           throw new Error(`Error al cargar tags: ${tagsResponse.statusText}`);
         }
 
-        const data = await response.json();
+        const data: Array<MergeCommit & { parents: unknown[] }> = await response.json();
         const tagsData: Array<{ name: string; commit: { sha: string } }> = await tagsResponse.json();
         const tagsByCommit = new Map<string, string[]>();
 
