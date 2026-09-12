@@ -70,7 +70,10 @@ function App() {
 
         // LA MAGIA: Filtramos solo los commits que son Merges (tienen más de 1 padre)
         const mergeCommits = data
-          .filter((commitItem) => commitItem.parents.length > 0)
+          .filter((commitItem) => (
+            commitItem.parents.length > 0
+            && commitItem.commit.author.name !== 'github-actions[bot]'
+          ))
           .map((commitItem) => ({
             ...commitItem,
             tags: tagsByCommit.get(commitItem.sha) ?? [],
