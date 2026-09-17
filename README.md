@@ -15,7 +15,7 @@ La aplicación utiliza un Personal Access Token (PAT) para consultar la API de G
 1. Inicia sesión en [GitHub](https://github.com/).
 2. Abre tu foto de perfil y entra en **Settings**.
 3. En el menú lateral, selecciona **Developer settings**.
-4. Entra en **Personal access tokens** y selecciona **Fine-grained tokens**.
+4. Entra en **Personal access tokens** y selecciona **Tokens (classics)**.
 5. Pulsa **Generate new token**.
 6. Asigna un nombre, por ejemplo `report-git-local`.
 7. Define una fecha de expiración. Se recomienda no usar tokens permanentes.
