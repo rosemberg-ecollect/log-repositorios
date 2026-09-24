@@ -79,7 +79,7 @@
 }
 
 .results-table__commit-link {
-  color: #1c1e2b;
+  color: --var(--text-h);
   font-family: var(--mono);
   font-weight: 700;
   text-decoration: none;
