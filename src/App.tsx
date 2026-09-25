@@ -154,7 +154,11 @@ function App() {
 
   return (
     <>
-      <Nav logo={<img src={ecollectLogo} alt="Ecollect" />} />
+      <Nav
+        logo={<img src={ecollectLogo} alt="Ecollect" />}
+        user={user}
+        onLogout={handleLogout}
+      />
       <main className="p-6 max-w-4xl mx-auto bg-gray-50 min-h-screen">
         {!user ? (
           <div style={{ display: 'grid', placeItems: 'center', minHeight: '40vh' }}>
@@ -168,15 +172,6 @@ function App() {
           </div>
         ) : (
           <>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
-              <div>
-                <p style={{ margin: 0, fontWeight: 700 }}>Bienvenido, {user.name || user.login}</p>
-              </div>
-              <button type="button" onClick={handleLogout} style={{ padding: '0.5rem 0.9rem', borderRadius: '8px', border: '1px solid #d1d5db', background: '#fff', cursor: 'pointer' }}>
-                Cerrar sesión
-              </button>
-            </div>
-
             <SearchFilters
               repositories={repositories}
               branches={branches}
