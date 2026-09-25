@@ -5,11 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "node --watch server.js",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "start": "node server.js",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
